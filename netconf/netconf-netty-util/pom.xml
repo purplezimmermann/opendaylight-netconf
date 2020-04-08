@@ -19,7 +19,7 @@
   <groupId>org.opendaylight.netconf</groupId>
   <artifactId>netconf-netty-util</artifactId>
   <packaging>bundle</packaging>
-  <version>1.7.1</version>
+  <version>1.7.1_1-ADVA</version>
   <name>${project.artifactId}</name>
 
   <dependencies>
