@@ -33,6 +33,16 @@ public class LoginPasswordHandler extends AuthenticationHandler {
     @Override
     public AuthFuture authenticate(final ClientSession session) throws IOException {
         session.addPasswordIdentity(password);
+
+        // ADVA/HACK: Add delay to solve authentication failure with libssh-based servers
+        try {
+            Thread.sleep(1000);
+        }
+
+        catch (final InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
         return session.auth();
     }
 }
